@@ -3,11 +3,37 @@
 <head>
   <title>Secret Santa (Beta)</title>
   <script type="javascript">
-    alert("JR is awesome.");
+    // Create an array of participants
+    // Associate participants in groups
+
+    var participants = [
+      { name: 'Mikey', group: 1 },
+      { name: 'Victoria', group: 1 },
+      { name: 'Julia', group: 2 },
+      { name: 'Max', group: 2 },
+      { name: 'John Ryan', group: 3 },
+      { name: 'Gavin', group: 3 },
+      { name: 'Amelia', group: 3 },
+      { name: 'Braden', group: 3 },
+      { name: 'Jules', group: 4 },
+      { name: 'CJ', group: 4 },
+      { name: 'Jackie', group: 5 },
+      { name: 'Gabriel', group: 5 },
+
+    ];
+
+    participants.forEach(alert(name));
+
+    //You got disconnected... what's up?
+
+    //(so that we can prevent selection within group)
+    // For each participant, select another participant and add them to selected array
+      // IF... they are not in participants group, or already in selected array
+
   </script>
 </head>
 <body>
   <h1>Secret Santa (Beta)</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu gravida turpis, non rhoncus nisl. Suspendisse vehicula lacinia fermentum. Duis mi nisi, vehicula congue ex eleifend, semper ornare arcu. Sed eleifend lectus a interdum mattis. Aliquam ut laoreet metus. Curabitur cursus justo in nisl euismod, sit amet ultricies neque porttitor. Suspendisse fringilla malesuada tortor, a hendrerit nunc efficitur at. Cras quis leo auctor, mattis erat quis, dapibus velit. Nam iaculis consequat viverra. Nunc vitae orci nec neque sollicitudin iaculis in sed est. Fusce rutrum aliquet magna, sit amet laoreet mauris lacinia non.</p>
+
 </body>
 </html>
