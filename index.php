@@ -9,10 +9,10 @@ $participants = array(
   array("name" => "Amelia","group" => "C"),
   array("name" => "Braden","group" => "C"),
   array("name" => "Mikey","group" => "A"),
-  array("name" => "Victoria","group" => "A"),
-  array("name" => "Julia","group" => "B"),
+  array("name" => "Tori","group" => "A"),
+  array("name" => "Julia C","group" => "B"),
   array("name" => "Max","group" => "B"),
-  array("name" => "Jules","group" => "D"),
+  array("name" => "Julia D","group" => "D"),
   array("name" => "CJ","group" => "D"),
   array("name" => "Jackie","group" => "E"),
   array("name" => "Gabriel","group" => "E")
@@ -47,5 +47,50 @@ do {
 } while (count($participants)!=count($output));
 //If at the end the results array does not have the same
 //number of elements as the participant array, start over
+?><!DOCTYPE html>
+<html>
+<head>
+  <title>Secret Santa</title>
+  <style type="text/css">
+  body {
+    background: #ffffff url("bg.jpg") no-repeat center top;
+  }
+  h1 {
+    margin:0 auto;
+    width: 300px; height: 185px;
+    background: url("https://www.ialottery.com/images/Promotions/SecretSanta/SecretSantaLogo_300px.png");
+    text-indent: -9999px;
+  }
+  table {
+    margin:0 auto;
+    width:auto;
+  }
+  td {
+    color:#333;
+    font:normal 32px "Handvetica",sans-serif;
+    line-height:36px;
+  }
+  .arrow0{transform:rotate(-4deg); -ms-transform:rotate(-4deg); -webkit-transform:rotate(-4deg);}
+  .arrow1{transform:rotate(-3deg); -ms-transform:rotate(-3deg); -webkit-transform:rotate(-3deg);}
+  .arrow6{transform:rotate(-2deg); -ms-transform:rotate(-2deg); -webkit-transform:rotate(-2deg);}
+  .arrow7{transform:rotate(-1deg); -ms-transform:rotate(-1deg); -webkit-transform:rotate(-1deg);}
+  .arrow8{transform:rotate(0deg); -ms-transform:rotate(0deg); -webkit-transform:rotate(0deg);}
+  .arrow5{transform:rotate(1deg); -ms-transform:rotate(1deg); -webkit-transform:rotate(1deg);}
+  .arrow6{transform:rotate(2deg); -ms-transform:rotate(2deg); -webkit-transform:rotate(2deg);}
+  .arrow7{transform:rotate(3deg); -ms-transform:rotate(3deg); -webkit-transform:rotate(3deg);}
+  .arrow8{transform:rotate(4deg); -ms-transform:rotate(4deg); -webkit-transform:rotate(4deg);}
 
-print_r($output);exit;
+  </style>
+</head>
+<body>
+  <h1>Secret Santa</h1>
+  <table>
+      <tr><td></td><td></td><td></td></tr>
+    <?php foreach($output as $giver => $receiver): ?>
+      <tr><td><?=$giver?></td><td width="100" align="center"><img class="arrow arrow<?=mt_rand(0,8)?>" valign="middle" width="30" src="arrow.jpg"></td><td><?=$output[$giver]?></td></tr>
+    <?php endforeach;?>
+  </table>
+</body>
+</html>
+<?php
+//print_r($output);
