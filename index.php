@@ -70,15 +70,15 @@ do {
     font:normal 32px "Handvetica",sans-serif;
     line-height:36px;
   }
-  .arrow0{transform:rotate(-4deg); -ms-transform:rotate(-4deg); -webkit-transform:rotate(-4deg);}
-  .arrow1{transform:rotate(-3deg); -ms-transform:rotate(-3deg); -webkit-transform:rotate(-3deg);}
-  .arrow6{transform:rotate(-2deg); -ms-transform:rotate(-2deg); -webkit-transform:rotate(-2deg);}
-  .arrow7{transform:rotate(-1deg); -ms-transform:rotate(-1deg); -webkit-transform:rotate(-1deg);}
-  .arrow8{transform:rotate(0deg); -ms-transform:rotate(0deg); -webkit-transform:rotate(0deg);}
-  .arrow5{transform:rotate(1deg); -ms-transform:rotate(1deg); -webkit-transform:rotate(1deg);}
-  .arrow6{transform:rotate(2deg); -ms-transform:rotate(2deg); -webkit-transform:rotate(2deg);}
-  .arrow7{transform:rotate(3deg); -ms-transform:rotate(3deg); -webkit-transform:rotate(3deg);}
-  .arrow8{transform:rotate(4deg); -ms-transform:rotate(4deg); -webkit-transform:rotate(4deg);}
+  .tilt0{transform:rotate(-4deg); -ms-transform:rotate(-4deg); -webkit-transform:rotate(-4deg);}
+  .tilt1{transform:rotate(-3deg); -ms-transform:rotate(-3deg); -webkit-transform:rotate(-3deg);}
+  .tilt2{transform:rotate(-2deg); -ms-transform:rotate(-2deg); -webkit-transform:rotate(-2deg);}
+  .tilt3{transform:rotate(-1deg); -ms-transform:rotate(-1deg); -webkit-transform:rotate(-1deg);}
+  .tilt4{transform:rotate(0deg); -ms-transform:rotate(0deg); -webkit-transform:rotate(0deg);}
+  .tilt5{transform:rotate(1deg); -ms-transform:rotate(1deg); -webkit-transform:rotate(1deg);}
+  .tilt6{transform:rotate(2deg); -ms-transform:rotate(2deg); -webkit-transform:rotate(2deg);}
+  .tilt7{transform:rotate(3deg); -ms-transform:rotate(3deg); -webkit-transform:rotate(3deg);}
+  .tilt8{transform:rotate(4deg); -ms-transform:rotate(4deg); -webkit-transform:rotate(4deg);}
 
   </style>
 </head>
@@ -87,7 +87,7 @@ do {
   <table>
       <tr><td></td><td></td><td></td></tr>
     <?php foreach($output as $giver => $receiver): ?>
-      <tr><td><?=$giver?></td><td width="100" align="center"><img class="arrow arrow<?=mt_rand(0,8)?>" valign="middle" width="30" src="arrow.jpg"></td><td><?=$output[$giver]?></td></tr>
+      <tr><td class="tilt<?=mt_rand(3,5)?>"><?=$giver?></td><td width="100" align="center"><img class="tilt<?=mt_rand(0,8)?>" width="30" src="arrow.jpg"></td><td class="tilt<?=mt_rand(3,5)?>"><?=$output[$giver]?></td></tr>
     <?php endforeach;?>
   </table>
 </body>
