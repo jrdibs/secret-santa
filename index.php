@@ -31,8 +31,8 @@ function selectRecipient($i){
 
   //Select participant and recipient and add to output if they are...
   //Not from the same group
-  //And are not the same person (redundant)
-  if(($participants[$i][group]!=$recipients[$i][group])&&($participants[$i][name]!=$recipients[$i][name])){
+  //And are not the same person (redundant) - fixed by me
+  if(($participants[$i][group]!=$recipients[$i][group])){
     $output[$participants[$i][name]] = $recipients[$i][name];
   }
 }
@@ -69,8 +69,8 @@ ksort($participants);
     width:auto;
   }
   td {
-    color:#333;
-    font:normal 32px "Handvetica",sans-serif;
+    color:#333; //can we get the font to be more 'handwritten-like'?
+  font:normal 32px "Handvetica",sans-serif;
     line-height:36px;
   }
   .tilt0{transform:rotate(-4deg); -ms-transform:rotate(-4deg); -webkit-transform:rotate(-4deg);}
