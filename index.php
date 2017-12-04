@@ -31,7 +31,7 @@ function selectRecipient($i){
 
   //Select participant and recipient and add to output if they are...
   //Not from the same group
-  //And are not the same person
+  //And are not the same person (redundant)
   if(($participants[$i][group]!=$recipients[$i][group])&&($participants[$i][name]!=$recipients[$i][name])){
     $output[$participants[$i][name]] = $recipients[$i][name];
   }
@@ -47,6 +47,9 @@ do {
 } while (count($participants)!=count($output));
 //If at the end the results array does not have the same
 //number of elements as the participant array, start over
+
+ksort($participants);
+
 ?><!DOCTYPE html>
 <html>
 <head>
