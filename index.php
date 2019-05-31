@@ -90,7 +90,11 @@ ksort($participants);
   <table>
       <tr><td></td><td></td><td></td></tr>
     <?php foreach($output as $giver => $receiver): ?>
-      <tr><td class="tilt<?=mt_rand(3,5)?>"><?=$giver?></td><td width="100" align="center"><img class="tilt<?=mt_rand(0,8)?>" width="30" src="arrow.jpg"></td><td class="tilt<?=mt_rand(3,5)?>"><?=$output[$giver]?></td></tr>
+      <tr>
+        <td class="tilt<?=mt_rand(3,5)?>"><?=$giver?></td>
+        <td width="100" align="center"><img class="tilt<?=mt_rand(0,8)?>" width="30" src="arrow.jpg"></td>
+        <td class="tilt<?=mt_rand(3,5)?>"><?=$output[$giver]?></td>
+      </tr>
     <?php endforeach;?>
   </table>
 </body>
